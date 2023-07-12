@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+class index{
+public:
+
+    void print_array(int arr[], int n){
+
+        cout<<"array : ";
+        for(int i=0; i<n; i++){
+            printf("%d, ",array[i]);
+            cout<<", ";
+        }
+        printf("\n");
+    }
+
+
+    void bubble(int arr[], int n){
+        for(int i=0; i<n-1; i++){
+
+            for(int j=0; j<n-i-1; j++){
+                if(arr[j]>arr[j+1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+
+                }
+            }
+        }
+
+    }
+
+};
+
+
+
+int main()
+{
+    index s1;
+    index s2;
+
+    int a[]={1,5,2,9,4,8,3};
+    int n= sizeof a /sizeof a[0];
+    printf("Array size : %d",n);
+    printf("\n");
+    s1.print_array(a, n);
+    s1.bubble(a,n);
+    s1.print_array(a, n);
+
+}
